@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clipToPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:contentDescription="Add Todo"
+                android:src="@drawable/plus"
+                app:tint="@color/black" />
+
+            <TextView
+                style="@style/Widget.MaterialComponents.TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="16dp"
+                android:gravity="center_vertical"
+                android:text="Add New Todo"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:tint="@color/black" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etTodoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="50sp"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:focusable="true"
+            android:hint="New Todo"
+            android:importantForAutofill="no"
+            android:inputType="textAutoComplete" />
+
+        <Button
+            android:id="@+id/btnAddTodo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginBottom="4dp"
+            android:text="+ Add" />
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>
